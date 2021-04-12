@@ -25,7 +25,7 @@ const Map = () => {
 
   return (
     <div>
-      <div style={{ height: "300px", width: "300px" }} ref={mapContainer} />
+      <div style={{ height: "6rem", width: "9rem" }} ref={mapContainer} />
     </div>
   );
 };

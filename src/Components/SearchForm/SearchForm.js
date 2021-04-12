@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import {
-  MDBDropdown,
-  MDBDropdownToggle,
-  MDBDropdownMenu,
-  MDBDropdownItem,
   MDBRow,
   MDBCol,
   MDBInput,
@@ -12,14 +8,18 @@ import {
   MDBMask,
   MDBView,
   MDBBtn,
+  MDBCardText,
+  MDBCardTitle,
+  MDBCardImage,
 } from "mdbreact";
 import "./SearchForm.css";
 import SearchCheckBox from "../SearchCheckbox/SearchCheckBox";
+import TherapistsContext from "../../context/TherapistsContext";
 import axios from "axios";
 
 const SearchForm = () => {
-  // const res = await axios.get('http://mywebsite.com/therapists', { params: { category: "massage" } });
-  const URL = "https://cherry-cupcake-02141.herokuapp.com/therapist";
+
+  const { checkAvailability, filteredTherapists } = useContext(TherapistsContext)
 
   const [categories, setCategories] = useState({
     massage: { selected: false, displayName: "Massage Therapist" },
@@ -36,30 +36,6 @@ const SearchForm = () => {
         displayName: categories[e.target.name].displayName,
       },
     });
-  };
-
-  const checkAvailability = (e) => {
-    e.preventDefault();
-    const filteredCategories = Object.entries(categories).reduce(
-      (acc, [name, { selected }]) => (selected && acc.push(name), acc),
-      []
-    );
-
-    /*
-      const selectedDoctors = [];
-
-      for (const doctor in categories) {
-        if (categories[doctor].selected === true) selectedDoctors.push(doctor);
-      }
-    */
-    axios
-      .get(URL, {
-        params: {
-          category: filteredCategories,
-        },
-      })
-      .then((res) => console.log("res", res))
-      .catch((err) => console.log("err", err));
   };
 
   return (
@@ -93,18 +69,36 @@ const SearchForm = () => {
               handleChange={handleChange}
             />
             <br></br>
-            <p>Postcode | Street | City</p>
-            <MDBInput label="" background size="lg" />
-            <p>Search for Date</p>
-            <MDBInput label="" background size="lg" />
+            <p>Postcode</p>
+            <MDBInput label="Valid Postcode" background size="lg" />
+            
+
+            
             <MDBBtn
-              onClick={checkAvailability}
+              onClick={(e) => checkAvailability(e, categories)}
               color="green"
               size="md"
               className=""
-            >
+          >
+            
               Check Availability
             </MDBBtn>
+            {/* CARD */}
+<MDBCol>
+      <MDBCard style={{ width: "22rem" }}>
+        <MDBCardImage className="img-fluid" src="https://n-cdn.serienjunkies.de/og/96920.jpg" waves />
+        <MDBCardBody style={{backgroundColor:'rgb(216, 214, 214)'}}>
+          <MDBCardTitle>{filteredTherapists.length &&filteredTherapists[0].category}</MDBCardTitle>
+          <MDBCardText text="black" >{filteredTherapists.length &&filteredTherapists[0].first_name}</MDBCardText>
+          <MDBCardText text="black" >{filteredTherapists.length &&filteredTherapists[0].last_name}</MDBCardText>
+          <MDBCardText text="black" >Eductaion:  {filteredTherapists.length &&filteredTherapists[0].education}</MDBCardText>
+          <MDBCardText text="black" >Specialities:  {filteredTherapists.length &&filteredTherapists[0].specialities}</MDBCardText>
+          <MDBCardText text="black" >About me:  {filteredTherapists.length &&filteredTherapists[0].about}</MDBCardText>
+          <MDBBtn color="green" href="#">Book me</MDBBtn>
+        </MDBCardBody>
+      </MDBCard>
+    </MDBCol>
+{/* CARD */}
           </MDBCol>
         </MDBRow>
       </MDBCardBody>

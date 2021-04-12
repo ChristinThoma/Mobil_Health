@@ -190,7 +190,7 @@ const RegisterPage2 = () => {
                 htmlFor="defaultFormRegisterPasswordEx4"
                 className="grey-text"
               >
-                Zip
+                Postal Code
               </label>
               <input
                 // value={this.state.zip}
@@ -198,8 +198,8 @@ const RegisterPage2 = () => {
                 type="text"
                 id="defaultFormRegisterPasswordEx4"
                 className="form-control"
-                name="zip"
-                placeholder="Zip"
+                name="Postal Code"
+                placeholder="Postal Code"
                 required
               />
               <div className="invalid-feedback">

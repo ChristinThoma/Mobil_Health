@@ -2,27 +2,25 @@ import React, { Fragment, useContext, useEffect } from "react";
 import TherapistsContext from "../context/TherapistsContext"
 import TherapistCard from './TherapistCard';
 import { MDBPagination, MDBPageItem, MDBPageNav, MDBCol, MDBRow } from "mdbreact";
-
+import FilteredTherapists from "../Components/FilteredTherapists/FilteredTherapists"
 
 const TherapistList = () => {
-    const { data, fetchAPI } = useContext(TherapistsContext);
-  
+    const { filteredTherapists, fetchAPI } = useContext(TherapistsContext);
+
     useEffect(() => {
-      fetchAPI()
-    } , []);
-
-
-
-    
+      if (!filteredTherapists.length)
+        fetchAPI();
+    }, [])
   
     return (<Fragment>    
                 <ul>
-                  {data.length && data.map(therapist => <TherapistCard therapist={therapist} /> )}
+                  {filteredTherapists.length && filteredTherapists.map(therapist => <TherapistCard therapist={therapist} /> )}
                   
-                </ul>
+                </ul> 
                 {/* pageination */}
                 <MDBRow>
       <MDBCol>
+       
         <MDBPagination className="mb-5" color="green">
           <MDBPageItem>
             <MDBPageNav aria-label="Previous">

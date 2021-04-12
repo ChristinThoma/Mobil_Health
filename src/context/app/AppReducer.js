@@ -1,11 +1,17 @@
-import { FETCH_API, FETCH_SINGLE_THERAPIST } from '../actions.js';
+import { FETCH_API, SET_FILTERED_THERAPISTS } from '../actions.js';
 
 export default (state, action) => {
     switch(action.type) {
         case FETCH_API:
             return {
                 ...state,
-                data: action.payload
+                data: action.payload,
+                filteredTherapists: action.payload
+            }
+        case SET_FILTERED_THERAPISTS:
+            return {
+                ...state,
+                filteredTherapists: action.payload
             }
     }
 }
