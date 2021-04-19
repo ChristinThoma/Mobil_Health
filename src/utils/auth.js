@@ -75,7 +75,7 @@ const userContext = async () => {
     const { role } = decodeToken()
     const userContext = await axios.get(`${serverUrl}/${role}/me`)
     userContext.data.role = role;
-    console.log({userContext})
+    console.log("userContext", {userContext})
     return userContext
    } catch (e) { 
      console.error(e.message)
@@ -84,6 +84,7 @@ const userContext = async () => {
 
 const logout=()=>{
   Cookies.remove(`${REACT_APP_NAME}-auth-token`)
+
 }
 
 export {

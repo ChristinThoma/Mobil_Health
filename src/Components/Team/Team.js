@@ -10,7 +10,7 @@ import {
   MDBCardBody,
 } from "mdbreact";
 import rafa from "../../images/rafa.png";
-import christin from "../../images/christin.jpeg";
+import christin from "../../images/christin.JPG";
 import fred from "../../images/fred.png";
 import tim from "../../images/tim.jpeg";
 import "./Team.css";

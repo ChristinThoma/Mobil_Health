@@ -30,6 +30,8 @@ const Navbar = ({context}) => {
     console.log(e.target.value);
   };
 
+  console.log("context", context)
+
   return (
     <MDBNavbar color="green" dark expand="md">
       <MDBNavLink to="/">
