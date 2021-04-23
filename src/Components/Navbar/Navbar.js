@@ -8,7 +8,6 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
   MDBFormInline,
-  MDBInput,
 } from "mdbreact";
 import "./Navbar.css";
 import Logo from "../util/mhicon.png";

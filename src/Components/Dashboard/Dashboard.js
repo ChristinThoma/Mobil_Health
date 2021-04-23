@@ -1,17 +1,14 @@
 import React, { useEffect,useState, useContext } from "react";
-import {useHistory} from "react-router-dom"
-import { userContext,logout } from "../../utils/auth";
-import { MDBContainer, MDBIcon, MDBRow, MDBCol, MDBTabPane, MDBTabContent,  MDBCardHeader, MDBCardFooter, MDBBtn,MDBNav, MDBNavItem, MDBNavLink, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText,MDBView } from "mdbreact";
+import { userContext } from "../../utils/auth";
+import { MDBContainer, MDBIcon, MDBRow, MDBCol, MDBTabPane, MDBTabContent,  MDBCardHeader, MDBBtn,MDBNav, MDBNavItem, MDBNavLink, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText,MDBView } from "mdbreact";
 import '../../App.css'; //Import here your file style
 import './Dashboard.css'
-import { FETCH_SINGLE_THERAPIST } from "../../context/actions";
-import { FreeCameraOptions } from "mapbox-gl";
 import UsersContext from '../../context/UsersContext'
 import axios from "axios";
 
 const Dashboard = ({onLogout}) => {
     const { usersContext, setUsersContext} = useContext(UsersContext)
-    const history =useHistory();
+    
     const [user, setUser] = useState(null);
     const [pill, setPill] = useState("1");
     const [therapistBookings, setTherapistBookings] = useState([]);

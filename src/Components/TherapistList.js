@@ -8,7 +8,7 @@ import {
   MDBCol,
   MDBRow,
 } from "mdbreact";
-import FilteredTherapists from "../Components/FilteredTherapists/FilteredTherapists";
+
 
 
 const TherapistList = () => {

@@ -3,7 +3,6 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBIcon,
   MDBBtn,
   MDBModal,
   MDBModalBody,
@@ -13,14 +12,13 @@ import {
 } from "mdbreact";
 import "./BookingPage.css";
 import axios from "axios";
-import serverUrl from "../../utils/serverUrl";
 import UsersContext from '../../context/UsersContext';
-import TherapistsContext from '../../context/TherapistsContext';
-import { userContext } from "../../utils/auth";
+
+
 
 const BookingPage = ({ therapist }) => {
   const { usersContext, setUsersContext} = useContext(UsersContext)
-  const { therapistsContext, setTherapistsContext} = useContext(TherapistsContext)
+  // const { therapistsContext, setTherapistsContext} = useContext(TherapistsContext)
   const [extendBooking, setextendBooking] = useState(false);
   const [inputData, setInputData] = useState({});
 
