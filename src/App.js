@@ -3,7 +3,7 @@ import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
-import { Switch, Route, Redirect, useHistory } from "react-router-dom";
+import { Switch, Route,useHistory } from "react-router-dom";
 import AppState from "./context/app/AppState";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";

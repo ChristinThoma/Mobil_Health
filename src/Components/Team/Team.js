@@ -9,10 +9,10 @@ import {
   MDBCardText,
   MDBCardBody,
 } from "mdbreact";
-import rafa from "../../images/rafa.png";
 import christin from "../../images/christin.JPG";
 import fred from "../../images/fred.png";
 import tim from "../../images/tim.jpeg";
+import primas from "../../images/primas.JPG"
 import "./Team.css";
 
 const Team = () => {
@@ -39,7 +39,7 @@ const Team = () => {
                 </p>
                 <img
                   className="tpic image float-center"
-                  src={rafa}
+                  src={primas}
                   alt="rafa"
                 />{" "}
               </MDBCardText>
