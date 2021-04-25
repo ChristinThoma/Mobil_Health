@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <h1>
       <div className="spinner" role="status">
-        <img src={Logo} height="200rem" />
+        <img src={Logo} height="200rem" alt="spinner"/>
         <span className="sr-only">Loading...</span>
       </div>
     </h1>
