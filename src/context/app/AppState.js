@@ -26,7 +26,7 @@ const AppState = (props) => {
 
         e.preventDefault();
         const filteredCategories = Object.entries(categories).reduce(
-          (acc, [name, { selected }]) => (selected && acc.push(name), acc),
+          (acc, [name, { selected }]) => (selected && acc.push(name) && acc),
           []
         );
 
