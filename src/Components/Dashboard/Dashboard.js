@@ -115,7 +115,7 @@ const Dashboard = ({onLogout}) => {
         {' '}
             </MDBCardText>
             
-            <p className='font-weight-bold blue-text'><span class="dot"></span>You are logged in as {user.role}</p>
+            <p className='font-weight-bold blue-text'><span className="dot"></span>You are logged in as {user.role}</p>
             {/* <MDBCol md='12' className='d-flex justify-content-center'>
                 maybe a button to change something?
             </MDBCol> */}
