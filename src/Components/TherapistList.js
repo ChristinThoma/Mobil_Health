@@ -26,7 +26,7 @@ const TherapistList = () => {
     if (!filteredTherapists.length) {
       fetchAPI()
       setPaginationLength(Math.ceil(filteredTherapists.length / page.perPage));
-    };
+    }
   }, []);
 
 const setPagination = (e) => {
