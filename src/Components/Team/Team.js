@@ -52,7 +52,7 @@ const Team = () => {
           <MDBCard className="text-center">
             <MDBCardHeader color="green">Fred</MDBCardHeader>
             <MDBCardBody>
-              <MDBCardTitle>Head of Design and Web Destroyer 💣</MDBCardTitle>
+              <MDBCardTitle>Head of Design and Web Destroyer!  💣</MDBCardTitle>
               <br />
               <MDBCardText>
                 <p className="grey-text">He can destroy everything.</p>
