@@ -35,7 +35,7 @@ const Navbar = ({context}) => {
     <MDBNavbar color="green" dark expand="md">
       <MDBNavLink to="/">
         <MDBNavbarBrand>
-          <img className="logo" src={Logo} alt="MH Logo" height="133" to="/" />
+          <img className="logo" src={Logo} alt="MH Logo" height="133"/>
         </MDBNavbarBrand>
       </MDBNavLink>
 

@@ -26,7 +26,7 @@ const TherapistList = () => {
     if (!filteredTherapists.length) {
       fetchAPI()
       setPaginationLength(Math.ceil(filteredTherapists.length / page.perPage));
-    };
+    }
   }, []);
 
 const setPagination = (e) => {
@@ -61,7 +61,7 @@ const setPagination = (e) => {
       <MDBRow>
         <MDBCol>
           <MDBPagination className="mb-5" color="green">
-            <MDBPageItem disabled={page.currentPage == 1}>
+            <MDBPageItem disabled={page.currentPage === 1}>
               <MDBPageNav aria-label="Previous">
                 <span onClick={setPagination} aria-hidden="true" name="prev">
                   Previous
@@ -73,7 +73,7 @@ const setPagination = (e) => {
                 <MDBPageNav onClick={setPagination}>{i + 1}</MDBPageNav>
               </MDBPageItem>
             ))}
-            <MDBPageItem disabled={page.currentPage == paginationLength}>
+            <MDBPageItem disabled={page.currentPage === paginationLength}>
               <MDBPageNav aria-label="Previous">
                 <span onClick={setPagination} aria-hidden="true">
                   Next

@@ -22,7 +22,7 @@ h1 {
 }
 nav {
   position: absolute;
-  right: 0px;
+  right: 0;
 }
 nav li {
   display: inline;

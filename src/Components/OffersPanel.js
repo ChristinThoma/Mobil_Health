@@ -13,7 +13,6 @@ const PanelPage = () => {
           alt="offers panel one"
           width="250"
           height="170"
-          to="/"
         />
 <MDBBtn color="green" height="10" href="/therapistlist">Step 1: Please choose your Service here</MDBBtn>        <p >
           You can look here to see the list of all of Our Therapist Services.
@@ -26,7 +25,6 @@ const PanelPage = () => {
           alt="offers panel one"
           width="250"
           height="170"
-          to="/"
         />
         <MDBBtn color="green" href="#" >Step 2: Please book your Appointment</MDBBtn>
         <p>
@@ -40,7 +38,6 @@ const PanelPage = () => {
           alt="offers panel one"
           width="250"
           height="170"
-          to="/"
         />
         <MDBBtn color="green">Step 3: we have no idea what this step is!</MDBBtn>
         <p>

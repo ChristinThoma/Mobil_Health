@@ -11,7 +11,7 @@ const FooterPage = () => {
         <MDBRow md="4" style={{padding: 5}}>
         <MDBNavLink to="/">
           <MDBCol md="6">
-          <img className="logo" src={Logo} alt="MH Logo" height="133" to="/"/>
+          <img className="logo" src={Logo} alt="MH Logo" height="133"/>
           </MDBCol>
           </MDBNavLink>
           <MDBCol md="3" >
